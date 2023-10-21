@@ -10,8 +10,10 @@ export default function Map() {
   const userIcon = new L.Icon({ iconUrl: "../images/person.png" });
   const carIcon = new L.Icon({ iconUrl: "../images/car.png" });
   const locationIcon = new L.Icon({ iconUrl: "../images/marker.png" });
+
   const initialPosition = [-15.7741, 35.0319]; // Initial marker position
   const finalPosition = [-15.8136, 35.0964]; // Final marker position
+  
   const duration = 1000*60*12; // Animation duration in milliseconds
 
   const [currentPosition, setCurrentPosition] = useState(initialPosition);
@@ -60,9 +62,6 @@ export default function Map() {
   function error() {
     console.log("Unable to retrieve your location");
   }
-
-  {/*  -15.7908992 35.0322688 */}
-
   return (
     <div className="flex flex-col w-full h-screen items-center">
       <MapContainer

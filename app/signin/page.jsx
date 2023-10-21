@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 
 import {BsDoorOpen} from "react-icons/bs";
 
-const signin = () => {
+export default Signin = () => {
     const [signin, setSignIn] = useState(true);
 
     const handleForm = () => {setSignIn(!signin);}
@@ -76,5 +76,3 @@ const signin = () => {
         </div>
      );
 }
- 
-export default signin;
