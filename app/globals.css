@@ -1,27 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h3 {
+  @apply font-bold text-xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .navbar {
+    @apply fixed top-0 left-0 bg-secondary text-white h-20 w-screen flex justify-between items-center z-10;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  .navbar .menu-btn {
+    @apply transition-all duration-700 cursor-pointer;
+  }
+  .navbar .menu-btn.active {
+    @apply scale-105;
+  }
+  .navbar .menu-btn.active .line-1 {
+    @apply -rotate-45 translate-y-2 transition-all duration-500;
+  }
+  .navbar .menu-btn.active .line-3 {
+    @apply rotate-45 -translate-y-2 transition-all duration-500;
+  }
+  .navbar .menu-btn.active .line-2 {
+    @apply scale-0;
+  }
+  .navbar .links {
+    @apply flex flex-col justify-around ml-auto w-1/3 scale-0 md:flex-row md:scale-100;
+  }
+  .navbar .links.active {
+    @apply scale-100 absolute top-16 left-0 
+                w-screen h-auto z-50 
+                bg-secondary items-center justify-normal
+                transition-all duration-100 ease-in;
+  }
+  .navbar .links.active a {
+    margin: 1rem 0;
+  }
+  .banner {
+    @apply w-full h-[70vh] mt-16 overflow-hidden relative;
+  }
+  .banner img {
+    @apply w-full h-full object-cover;
+  }
+  .banner .caption {
+    @apply w-full h-[70vh] text-white absolute top-0 flex flex-col justify-center items-center;
+    background-color: rgba(0, 0, 0, 0.7176470588);
+  }
+  .banner .caption .cap-details {
+    @apply w-3/4 flex flex-col justify-center items-center;
+  }
+  .banner .caption .cap-details h2 {
+    @apply text-3xl font-bold mb-3;
+  }
+  .banner .caption .cap-details p {
+    @apply mb-9;
+  }
+  .banner .caption .cap-details .icon {
+    @apply bg-secondary flex items-center justify-around
+                    rounded-lg w-40 h-12;
+  }
+  .services {
+    @apply mt-10;
+  }
+  .services h3 {
+    @apply text-secondary text-2xl font-bold;
+  }
+  .services .service-list {
+    @apply flex items-center space-y-7 w-full flex-col mt-9 md:flex-row md:justify-around md:items-baseline;
+  }
+  .services .service-list .service {
+    @apply w-11/12  p-6 bg-gray-200 border border-gray-200 rounded-lg shadow-lg shadow-secondary md:w-3/12 md:h-72 md:overflow-y-hidden;
+  }
+  .services .service-list .service .icon {
+    @apply text-gray-200 dark:text-gray-400 mb-3 bg-secondary h-16 w-16 p-3;
+    border-radius: 50%;
+  }
+}/*# sourceMappingURL=globals.css.map */
