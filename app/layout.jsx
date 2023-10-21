@@ -25,7 +25,8 @@ export default function RootLayout({ children }) {
     <script
       type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWMNlDXolxfFVyAgDH64JzEaoodXi7AbE"
-    ></script>
+      async
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css"
