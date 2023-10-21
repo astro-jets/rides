@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import "leaflet-routing-machine";
 
+// Better get no errors this time
 export default function Map() {
   const userIcon = new L.Icon({ iconUrl: "../images/person.png" });
   const carIcon = new L.Icon({ iconUrl: "../images/car.png" });
