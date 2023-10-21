@@ -22,14 +22,14 @@ export default function RootLayout({ children }) {
       rel="stylesheet"
       href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
     />
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWMNlDXolxfFVyAgDH64JzEaoodXi7AbE"
-      async
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWMNlDXolxfFVyAgDH64JzEaoodXi7AbE"
+      defer
     />
     </head>
       <body className={inter.className}>
